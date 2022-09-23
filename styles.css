@@ -1,19 +1,32 @@
+:root {
+    --gridRow: 1;
+    --gridColumn: 1;
+}
+
 html,
 body{
     padding: 0;
     margin: 0;
 }
 
-.more-new-div{
-    width: 2px;
-    height: 2px;
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.new-div{
     border: black solid 2px;
+    padding: 3px;
+    display: flex;
 }
 
 .container{
     display: grid;
+    grid-template-columns: repeat(var(--gridColumn), 1fr);
+    grid-template-rows: repeat(var(--gridRow), 1fr);
     width: 400px;
     height: 400px;
+
 }
 
 .black-div{
