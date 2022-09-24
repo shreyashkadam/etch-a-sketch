@@ -39,9 +39,9 @@ function createNewGrid(){
     }
 };
 
-// clearSketch.addEventListener('click', () => {
-//     window.location.reload();
-// });
+clearSketch.addEventListener('click', () => {
+    window.location.reload();
+});
 
 newGrid.addEventListener('click', createNewGrid)
 
