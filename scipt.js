@@ -3,7 +3,7 @@ const clearSketch = document.getElementById('clear-sketch');
 const newGrid = document.getElementById('new-grid');
 const refresh = document.getElementById('refresh');
 
-let row = 16;
+let row = 30;
 
 
 const newRowDiv = [];
@@ -52,7 +52,7 @@ refresh.addEventListener('click', () => {
     window.location.reload();
 })
 
-createGrid(16,16);
+createGrid(30,30);
 hoverEffect();
 
 // using flexbox
