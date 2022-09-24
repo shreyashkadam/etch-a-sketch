@@ -1,8 +1,9 @@
 const container = document.getElementById('container');
 const clearSketch = document.getElementById('clear-sketch');
 const newGrid = document.getElementById('new-grid');
+const refresh = document.getElementById('refresh');
 
-let row = 1;
+let row = 16;
 
 
 const newRowDiv = [];
@@ -40,10 +41,16 @@ function createNewGrid(){
 };
 
 clearSketch.addEventListener('click', () => {
-    window.location.reload();
+    container.innerHTML='';
+    createGrid(row, row);
+    hoverEffect();
 });
 
-newGrid.addEventListener('click', createNewGrid)
+newGrid.addEventListener('click', createNewGrid);
+
+refresh.addEventListener('click', () => {
+    window.location.reload();
+})
 
 createGrid(16,16);
 hoverEffect();
