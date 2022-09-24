@@ -1,4 +1,9 @@
 const container = document.getElementById('container');
+const clearSketch = document.getElementById('clear-sketch');
+const newGrid = document.getElementById('new-grid');
+
+let row = 1;
+
 
 const newRowDiv = [];
 const newColumnDiv = [];
@@ -23,7 +28,24 @@ function hoverEffect(){
     });
 }
 
-createGrid(10,10);
+function createNewGrid(){
+    row = prompt("Enter Grid Size:");
+    if(row > 0 && row <= 100){
+        container.innerHTML='';
+        createGrid(row, row);
+        hoverEffect();
+    } else{
+        alert("Enter value between 1 to 100!")
+    }
+};
+
+// clearSketch.addEventListener('click', () => {
+//     window.location.reload();
+// });
+
+newGrid.addEventListener('click', createNewGrid)
+
+createGrid(16,16);
 hoverEffect();
 
 // using flexbox
